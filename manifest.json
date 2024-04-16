@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Ad Blocker",
+    "version": "1.0",
+    "permissions": ["storage", "activeTab", "scripting","tabs","storage","fontSettings","contentSettings","debugger"],
+    "host_permissions": ["http://*/*","https://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
